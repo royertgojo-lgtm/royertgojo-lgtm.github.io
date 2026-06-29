@@ -5,12 +5,15 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  base: '/perfil-profesional/',
+  // Como tu repo es "royertgojo-lgtm.github.io", tu app corre en la raíz.
+  base: '/', 
+  plugins: [
+    react(), 
+    tailwindcss()
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    base:'/Sign-Tack',
   },
 });
